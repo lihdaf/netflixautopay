@@ -2,7 +2,7 @@
 Autopay for Netflix!
 
 ### Features
-Try it!
+- **Try it!**
 
 ### Installation
 - `git clone https://github.com/lihdaf/netflixautopay.git`
