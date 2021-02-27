@@ -40,7 +40,7 @@ chrome_optionsx.add_argument("--incognito")
 chrome_optionsx.add_experimental_option('excludeSwitches', ['enable-logging'])
 # chrome_optionsx.add_argument("--headless")
 # chrome_optionsx.add_argument("--log-level=3")
-driver = webdriver.Chrome("C:\\Users\\ROCK ROG\\Desktop\\chromedriver.exe", options=chrome_optionsx)
+driver = webdriver.Chrome("chromedriver path", options=chrome_optionsx) #example C:\\Users\\lihdaf\\Desktop\\chromedriver.exe
 driver.get("https://www.netflix.com/")
 print("Opening netflix.com")
 emails = driver.find_element_by_id("id_email_hero_fuji")
