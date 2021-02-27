@@ -8,7 +8,7 @@ Autopay for Netflix!
 - `git clone https://github.com/lihdaf/netflixautopay.git`
 - `pip install faker`
 - `pip install -U selenium`
-- `get your chromedriver 	https://sites.google.com/a/chromium.org/chromedriver/downloads`
+- `get your chromedriver [here](https://sites.google.com/a/chromium.org/chromedriver/downloads)`
 
 ### Run
 - `py run.py`
