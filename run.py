@@ -30,7 +30,7 @@ email = input("Input ur email: ")
 password = "0000"
 print("@1 Mobile/Phone Plan\n@2 Premium UHD Plan")
 bills = input("Input selected plan <1/2>: ")
-cvv = getpass.getpass("Input ur cc: ")#6011xxxxxxxxxxx|11|23|649
+cvv = input("Input ur cc (ex: 4000xxxxxxxxxxx|08|22|568): ")#example 6011xxxxxxxxxxx|11|23|649
 zipin = input("Use zip code <Y/n>: ")
 if zipin == "y":
     zipins = input("Input your zip code: ")
@@ -40,7 +40,7 @@ chrome_optionsx.add_argument("--incognito")
 chrome_optionsx.add_experimental_option('excludeSwitches', ['enable-logging'])
 # chrome_optionsx.add_argument("--headless")
 # chrome_optionsx.add_argument("--log-level=3")
-driver = webdriver.Chrome("YOUR CHROMEDRIVER PATH", options=chrome_optionsx) #example C:\\Users\\lihdaf\\Desktop\\chromedriver.exe
+driver = webdriver.Chrome("C:\\YOUR\\PATH\\HERE\\chromedriver.exe", options=chrome_optionsx) #example C:\\Users\\Fadhil\\Desktop\\chromedriver.exe
 driver.get("https://www.netflix.com/")
 print("Opening netflix.com")
 emails = driver.find_element_by_id("id_email_hero_fuji")
@@ -124,6 +124,8 @@ if "Let's confirm your account." in driver.find_element_by_class_name("stepTitle
     print("Whoops!! you got otp on this order!")
 elif driver.find_elements_by_class_name("nf-message-contents"):
     print("There appears to be a problem with the payment method you are trying to use.")
+elif "Welcome to Netflix!" in driver.find_element_by_class_name("orderFinalTitle").text:
+    print("Success created your account.")
 else:
     driver.find_element_by_class_name("nf-btn").click()
     time.sleep(5)
